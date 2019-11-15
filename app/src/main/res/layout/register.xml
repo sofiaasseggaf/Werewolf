@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Register"
+    android:background="@drawable/bgww"
+    android:padding="50dp">
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username :"
+        android:textSize="10pt"
+        android:textColor="@color/colorAccent"/>
+    <EditText
+        android:id="@+id/txtPlayerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password :"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="10pt"/>
+    <EditText
+        android:id="@+id/txtPlayerPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+        <TextView
+            android:id="@+id/pht"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Photo :"
+            android:textSize="10pt"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btnPlayerPhoto"
+            android:layout_below="@id/pht"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="pilih file foto"
+            android:background="@drawable/gradient2" />
+        <ImageView
+            android:id="@+id/inputPlayerPhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/person"
+            android:layout_toRightOf="@id/pht"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSavePlayer"
+        android:layout_marginTop="70dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:background="@drawable/gradient"/>
+
+</LinearLayout>
