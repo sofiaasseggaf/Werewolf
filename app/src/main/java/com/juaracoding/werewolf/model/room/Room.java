@@ -14,17 +14,22 @@ import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 
 @Table(database = AppController.class)
-public class Room extends BaseModel implements Serializable, Parcelable{
+public class Room extends BaseModel implements Serializable, Parcelable
+{
 
-    @SerializedName("id")
-    @Expose
     @PrimaryKey
     @Column
+    @SerializedName("id")
+    @Expose
     private String id;
     @SerializedName("name")
     @Expose
     @Column
     private String name;
+    @SerializedName("jmlPlayer")
+    @Expose
+    @Column
+    private String jmlPlayer;
     @SerializedName("status")
     @Expose
     @Column
@@ -45,11 +50,12 @@ public class Room extends BaseModel implements Serializable, Parcelable{
 
     }
     ;
-    private final static long serialVersionUID = 6570097882008827194L;
+    private final static long serialVersionUID = 4496718737199640094L;
 
     protected Room(Parcel in) {
         this.id = ((String) in.readValue((String.class.getClassLoader())));
         this.name = ((String) in.readValue((String.class.getClassLoader())));
+        this.jmlPlayer = ((String) in.readValue((String.class.getClassLoader())));
         this.status = ((String) in.readValue((String.class.getClassLoader())));
     }
 
@@ -72,6 +78,14 @@ public class Room extends BaseModel implements Serializable, Parcelable{
         this.name = name;
     }
 
+    public String getJmlPlayer() {
+        return jmlPlayer;
+    }
+
+    public void setJmlPlayer(String jmlPlayer) {
+        this.jmlPlayer = jmlPlayer;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -83,6 +97,7 @@ public class Room extends BaseModel implements Serializable, Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeValue(id);
         dest.writeValue(name);
+        dest.writeValue(jmlPlayer);
         dest.writeValue(status);
     }
 

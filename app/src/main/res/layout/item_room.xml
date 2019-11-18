@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#5E131313">
+
+    <TextView
+        android:id="@+id/nameRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Name Room  : "
+        android:textSize="20sp"
+        android:fontFamily="@font/gardengrown"/>
+    <TextView
+        android:id="@+id/jml_Player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Pemain : "
+        android:textSize="20sp"
+        android:fontFamily="@font/gardengrown"/>
+    <TextView
+        android:id="@+id/statusRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status : "
+        android:textSize="20sp"
+        android:gravity="right"
+        android:fontFamily="@font/gardengrown"/>
+
+</LinearLayout>

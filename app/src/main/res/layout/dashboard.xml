@@ -7,13 +7,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bgww"
     tools:context=".Dashboard">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DASHBOARD"
-        android:layout_gravity="center"
-        android:layout_marginTop="300dp"/>
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btnCreateRoom"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:text="Create Room"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient"/>
+        <Button
+            android:id="@+id/btnInfoRole"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:text="Info Roles"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/gradient"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R O O M"
+            android:fontFamily="@font/anotherdanger"
+            android:textSize="20pt"
+            android:layout_centerInParent="true"
+            android:textColor="#E2346103" />
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:overScrollMode="never" />
 
 </LinearLayout>

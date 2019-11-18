@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#5E131313">
+
+    <ImageView
+        android:id="@+id/imageRole"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/nameRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Name        : "
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/gardengrown"/>
+        <TextView
+            android:id="@+id/skillRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skill       : "
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:fontFamily="@font/gardengrown"/>
+        <TextView
+            android:id="@+id/descriptionRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description : "
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/gardengrown"/>
+    </LinearLayout>
+
+</LinearLayout>

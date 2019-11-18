@@ -14,7 +14,8 @@ import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 
 @Table(database = AppController.class)
-public class Role extends BaseModel implements Serializable, Parcelable{
+public class Role extends BaseModel implements Serializable, Parcelable
+{
 
     @SerializedName("id")
     @Expose

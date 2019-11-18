@@ -100,6 +100,8 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendDataPlayer(photo);
+                Login.l.getDataPlayer();
+                finish();
             }
         });
     }
@@ -126,8 +128,6 @@ public class Register extends AppCompatActivity {
                 if (responServer != null) {
                     Toast.makeText(Register.this,responServer.getMessage(),Toast.LENGTH_LONG).show();
                 }
-                Intent a = new Intent(Register.this, Login.class);
-                startActivity(a);
             }
             @Override
             public void onFailure(Call<PlayerModel> call, Throwable t) {
@@ -139,8 +139,6 @@ public class Register extends AppCompatActivity {
                 player.save();
                 Toast.makeText(Register.this, "Maaf koneksi bermasalah, data tetap terinput, username : " + txtPlayerName.getText(), Toast.LENGTH_LONG).show();
                 call.cancel();
-                Intent a = new Intent(Register.this, Login.class);
-                startActivity(a);
             }
         });
 

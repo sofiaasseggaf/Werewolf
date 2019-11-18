@@ -33,6 +33,9 @@ public class Login extends AppCompatActivity {
     Button btnLogin, btnRegister;
     String name, pw;
     PlayerModel dataModel;
+    List<Player> players;
+
+    public static Login l;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,7 @@ public class Login extends AppCompatActivity {
         txtPlayerPassword = findViewById(R.id.txtPlayerPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
+        l=this;
 
         getDataPlayer();
 
@@ -69,11 +73,12 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Username & Password Salah !", Toast.LENGTH_SHORT).show();
                     }
                 }
+                finish();
             }
         });
     }
 
-        private void getDataPlayer() {
+        public void getDataPlayer() {
             final APIInterfacesRest apiInterface = APIClient.getClient().create(APIInterfacesRest.class);
             final Call<PlayerModel> dataSurvey = apiInterface.getDataPlayer( "192865F851A6648AD3DEC578C868F00E");
 
@@ -96,10 +101,15 @@ public class Login extends AppCompatActivity {
                 }
                 @Override
                 public void onFailure(Call<PlayerModel> call, Throwable t) {
+
+                    List<Player> model = SQLite.select()
+                            .from(Player.class)
+                            .queryList();
+
+
                     Toast.makeText(Login.this, "Terjadi gangguan koneksi", Toast.LENGTH_LONG).show();
                     call.cancel();
                 }
             });
         }
 }
-

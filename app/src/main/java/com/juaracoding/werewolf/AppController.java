@@ -9,8 +9,8 @@ import com.raizlabs.android.dbflow.config.FlowManager;
 @Database(name = AppController.NAME, version = AppController.VERSION)
 public class AppController extends Application {
 
-    public static final String NAME = "Werewolf";
-    public static final int VERSION = 2 ;
+    public static final String NAME = "Werewolf2";
+    public static final int VERSION = 1 ;
 
     @Override
     public void onCreate() {

@@ -23,7 +23,7 @@ public interface APIInterfacesRest {
 
 
  @GET("roles/all")
- Call<RolesModel> getDataModel(@Query("X-Api-Key") String apikey);
+ Call<RolesModel> getDataRoles(@Query("X-Api-Key") String apikey);
 
  @GET("player/all")
  Call<PlayerModel> getDataPlayer(@Query("X-Api-Key") String apikey);
@@ -71,6 +71,7 @@ public interface APIInterfacesRest {
  Call<RoomModel> sendDataRoom(
 
          @Part("name") RequestBody name,
+         @Part("jmlPlayer") RequestBody jmlPlayer,
          @Part("status") RequestBody status
  );
 }
